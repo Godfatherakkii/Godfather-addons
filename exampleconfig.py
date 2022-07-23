@@ -10,7 +10,7 @@ class Development(Config):
     # create any PostgreSQL database (i recommend to use elephantsql) and paste that link here
     DB_URI = "Your value"
     # After cloning the repo and installing requirements do python3 telesetup.py an fill that value with this
-    LEGEND_STRING = "Your value"
+    GOD_STRING = "Your value"
     # create a new bot in @botfather and fill the following vales with bottoken
     BOT_TOKEN = "Your value"
     # command handler
@@ -18,7 +18,7 @@ class Development(Config):
     # command hanler for sudo
     SUDO_HANDLER = "."
     # External plugins repo
-    EXTRA_REPO = "https://github.com/ITS-LEGENDBOT/PLUGINS"
-    UPSTREAM_REPO = "pro"
+    EXTRA_REPO = "https://github.com/Godfatherakkii/Godfather-addons"
+    UPSTREAM_REPO = "father"
     # Your City's TimeZone
     TZ = "Your value"
