@@ -17,7 +17,7 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH") or None
     # Datbase url heroku sets it automatically else get this from elephantsql
     DB_URI = os.environ.get("DATABASE_URL", None)
-    LEGEND_STRING = os.environ.get("LEGEND_STRING", None)
+    GOD_STRING = os.environ.get("GOD_STRING", None)
     # Telegram BOT Token and bot username from @BotFather
     BOT_TOKEN = os.environ.get("BOT_TOKEN") or os.environ.get("BOT_TOKEN_BF_HER", None)
     BOT_USERNAME = None
@@ -25,11 +25,11 @@ class Config(object):
     TZ = os.environ.get("TZ", "Asia/Kolkata")
     # set this with required legend repo link
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/ITS-LEGENDBOT/LEGENDBOT"
+        "UPSTREAM_REPO", "https://github.com/Godfatherakkii/Godfather-addons"
     )
     EXTRA_REPO = os.environ.get("EXTRA_REPO", None)
     if EXTRA_REPO and (EXTRA_REPO.lower() != "no") and not url(EXTRA_REPO):
-        EXTRA_REPO = "https://github.com/ITS-LEGENDBOT/PLUGINS"
+        EXTRA_REPO = "https://github.com/Godfatherakkii/Godfather-addons"
     # Set this value with group id of private group(can be found this value by .id)
     PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID") or 0)
     # Set this value same as PRIVATE_GROUP_BOT_API_ID if you need pmgaurd
@@ -55,7 +55,7 @@ class Config(object):
     # set this will channel id of your custom plugins
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL") or 0)
     # set this value with your required name for telegraph plugin
-    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "legenduserbot")
+    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "goduserbot")
     # for custom thumb image set this with your required thumb telegraoh link
     THUMB_IMAGE = os.environ.get(
         "THUMB_IMAGE", "https://telegra.ph/file/a0fc34e7cc123f2d82b14.jpg"
@@ -157,7 +157,7 @@ class Config(object):
     UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "master")
     # dont touch this at all
     SUDO_USERS: Set[int] = set()
-    LEGENDUBLOGO = None
+    GODDUBLOGO = None
     BOTLOG = False
     BOTLOG_CHATID = 0
     EXTRA_REPOBRANCH = os.environ.get("EXTRA_REPOBRANCH", "main")
