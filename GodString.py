@@ -20,3 +20,5 @@ if okvai == "69":
 
 else:
     print("Bhag jaa bhosdike warna")
+
+    
