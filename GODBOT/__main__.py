@@ -1,7 +1,7 @@
 import sys
 
-import Godbot
-from Godbot import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
+import Legendbot
+from Legendbot import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
 
 from .Config import Config
 from .core.logger import logging
@@ -19,8 +19,8 @@ from .utils import (
 
 LOGS = logging.getLogger("God-Father-UserBot")
 
-print(Godbot.__copyright__)
-print("Licensed under the terms of the " + Godbot.__license__)
+print(Legendbot.__copyright__)
+print("Licensed under the terms of the " + Legendbot.__license__)
 
 cmdhr = Config.HANDLER
 
