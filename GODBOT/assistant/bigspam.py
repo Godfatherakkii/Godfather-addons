@@ -1,6 +1,6 @@
 import asyncio
 
-from Legendbot import bot
+from Godbot import bot
 
 from ..helpers.utils import unsavegif
 from . import *
