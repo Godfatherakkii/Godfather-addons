@@ -1,7 +1,7 @@
 import sys
 
-import Legendbot
-from Legendbot import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
+import Godbot
+from Godbot import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
 
 from .Config import Config
 from .core.logger import logging
@@ -17,10 +17,10 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("God-Father-UserBot")
 
-print(Legendbot.__copyright__)
-print("Licensed under the terms of the " + Legendbot.__license__)
+print(Godbot.__copyright__)
+print("Licensed under the terms of the " + Godbot.__license__)
 
 cmdhr = Config.HANDLER
 
@@ -33,7 +33,7 @@ async def extrarepo():
 
 
 try:
-    LOGS.info("Starting Userbot")
+    LOGS.info("Starting  God Userbot")
     legend.loop.run_until_complete(setup_bot())
     LOGS.info("TG Bot Startup Completed")
 except Exception as e:
@@ -48,10 +48,12 @@ async def startup_process():
         await load_plugins("assistant")
         await killer()
         print("----------------")
-        print("Starting Bot Mode!")
-        print("⚜ LegendBot Has Been Deployed Successfully ⚜")
-        print("OWNER - @LegendBoy_XD")
-        print("Group - @LegendBot_XD")
+        print("💥Starting Bot Mode!💥")
+        print("⚜💥 God UserBot Has Been Deployed Successfully 💥⚜")
+        print("💥GOD FATHER AKKI IS UR DADDY💥")
+        print("💥ULRA POWERFULL USERBOT ON FIRE TG💥")
+        print("💥OWNER - @Godfatherakki💥")
+        print("💥Group - @GODFATHERUSERBOT_SUPPORT💥")
         print("----------------")
         await verifyLoggerGroup()
         await add_bot_to_logger_group(BOTLOG_CHATID)
