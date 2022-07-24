@@ -10,19 +10,19 @@ from .core.session import legend
 from .helpers.utils.utils import runasync
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-__version__ = "α • 2.1"
-__license__ = "GNU Affero General Public License v3.0"
-__author__ = "LegendBot <https://github.com/ITS-LEGENDBOT/LEGENDBOT>"
-__copyright__ = f"LegendBot Copyright (C) 2020 - 2021  { __author__}"
+__version__ = "α • 1.0"
+__license__ = "GNU Affero General Public License v4.0"
+__author__ = "God-FatherBot <https://github.com/Godfatherakkii/Godfather-addons>"
+__copyright__ = f"GodBot Copyright (C) 2020 - 2021  { __author__}"
 
 legend.version = __version__
 legend.tgbot.version = __version__
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("GodFather-UserBot")
 bot = legend
 
 
 StartTime = time.time()
-legendversion = "α • 2.1"
+legendversion = "α • 1.0"
 
 
 def close_connection(*_):
@@ -34,10 +34,10 @@ def close_connection(*_):
 signal.signal(signal.SIGTERM, close_connection)
 
 
-if Config.UPSTREAM_REPO == "pro":
-    UPSTREAM_REPO_URL = "https://github.com/ITS-LEGENDBOT/LEGENDBOT"
-elif Config.UPSTREAM_REPO == "multi":
-    UPSTREAM_REPO_URL = "https://github.com/ITS-LEGENDBOT/LEGENDUSERBOT"
+if Config.UPSTREAM_REPO == "father":
+    UPSTREAM_REPO_URL = "https://github.com/Godfatherakkii/Godfather-addons"
+elif Config.UPSTREAM_REPO == "powerfull":
+    UPSTREAM_REPO_URL = "https://github.com/Godfatherakkii/Godfather-addons"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
