@@ -74,7 +74,7 @@ faker
 htmlwebshot
 
 git+https://github.com/alexmercerind/youtube-search-python
-git+https://github.com/Godfather_Userbot/Telethon
+git+https://github.com/Godfather-addons/Telethon
 git+https://github.com/Godfather-addons/py-googletrans
 git+https://github.com/goldsmith/Wikipedia
 
