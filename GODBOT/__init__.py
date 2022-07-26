@@ -35,7 +35,7 @@ signal.signal(signal.SIGTERM, close_connection)
 
 
 if Config.UPSTREAM_REPO == "father":
-    UPSTREAM_REPO_URL = "https://github.com/Godfatherakkii/Godfather-addons"
+    UPSTREAM_REPO_URL = "https://github.com/Godfatherakkii/Godfather-Userbot"
 elif Config.UPSTREAM_REPO == "powerfull":
     UPSTREAM_REPO_URL = "https://github.com/Godfatherakkii/Godfather-addons"
 else:
