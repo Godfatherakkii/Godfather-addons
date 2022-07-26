@@ -8,7 +8,7 @@ from pathlib import Path
 from telethon import Button, functions, types, utils
 from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
 
-from Legendbot import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID, legendversion
+from GODBOT import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID, legendversion
 
 from ..Config import Config
 from ..core.logger import logging
@@ -25,7 +25,7 @@ from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("GODFATHERUSERBOT")
 cmdhr = Config.HANDLER
 
 
@@ -37,7 +37,7 @@ elif os.path.exists("config.py"):
 
 async def setup_bot():
     """
-    To set up bot for Legendbot
+    To set up bot for GODBOT
     """
     try:
         await legend.connect()
@@ -59,7 +59,7 @@ async def setup_bot():
         if Config.OWNER_ID == 0:
             Config.OWNER_ID = utils.get_peer_id(legend.me)
     except Exception as e:
-        LOGS.error(f"LEGEND_STRING - {e}")
+        LOGS.error(f"GOD_STRING - {e}")
         sys.exit()
 
 
@@ -73,7 +73,7 @@ async def startupmessage():
             Config.LEGENDUBLOGO = await legend.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/294b4dbdb74334fb0a8c1.jpg",
-                caption=f"#START\n\n**__Version__**:- {legendversion}\n\n**__Sudo__** :- {is_sudo}\n\n**Your LegendBot has been started successfully.**",
+                caption=f"#START\n\n**__Version__**:- {legendversion}\n\n**__Sudo__** :- {is_sudo}\n\n**Your GODBOT has been started successfully.**",
                 buttons=[(Button.url("Support", "https://t.me/LegendBot_XD"),)],
             )
     except Exception as e:
@@ -140,8 +140,8 @@ async def load_plugins(folder, extfolder=None):
         path = f"{extfolder}/*.py"
         plugin_path = extfolder
     else:
-        path = f"Legendbot/{folder}/*.py"
-        plugin_path = f"Legendbot/{folder}"
+        path = f"GODBOT/{folder}/*.py"
+        plugin_path = f"GODBOT/{folder}"
     files = glob.glob(path)
     files.sort()
     success = 0
@@ -195,8 +195,8 @@ async def load_plugins(folder, extfolder=None):
 async def hekp():
     try:
         os.environ[
-            "LEGEND_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
+            "GOD_STRING"
+        ] = "String Is A Sensitive Data \nSo Its Protected By GODFATHERBOT"
     except Exception as e:
         print(str(e))
     try:
@@ -263,7 +263,7 @@ async def verifyLoggerGroup():
     else:
         descript = "A Logger Group For LegendBot.Don't delete this group or change to group(If you change group all your previous snips, welcome will be lost.)"
         _, groupid = await create_supergroup(
-            "LegendBot Logger", legend, Config.BOT_USERNAME, descript
+            "GODBOT Logger", legend, Config.BOT_USERNAME, descript
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print(
@@ -293,7 +293,7 @@ async def verifyLoggerGroup():
             )
     if type:
         executable = sys.executable.replace(" ", "\\ ")
-        args = [executable, "-m", "Legendbot"]
+        args = [executable, "-m", "GODBOT"]
         os.execle(executable, *args, os.environ)
         sys.exit(0)
 
@@ -324,4 +324,4 @@ async def install_extrarepo(repo, branch, efolder):
     if os.path.exists(os.path.join(efolder, "requirements.txt")):
         rpath = os.path.join(efolder, "requirements.txt")
         await runcmd(f"pip3 install --no-cache-dir {rpath}")
-    await load_plugins(folder="Legendbot", extfolder=efolder)
+    await load_plugins(folder="GODBOT", extfolder=efolder)
