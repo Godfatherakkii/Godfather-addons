@@ -1,13 +1,13 @@
 import sys
 
-import Legendbot
-from Legendbot import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
+import GODBOT
+from GODBOT import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
 
-from Config import Config
-from core.logger import logging
-from core.session import legend
-from start import killer
-from utils import (
+from .Config import Config
+from .core.logger import logging
+from .core.session import legend
+from .start import killer
+from .utils import (
     add_bot_to_logger_group,
     hekp,
     install_extrarepo,
