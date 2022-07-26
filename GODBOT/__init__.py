@@ -4,11 +4,11 @@ import time
 
 import heroku3
 
-from .config import config
-from .core.logger import logging
-from .core.session import legend
-from .helpers.utils.utils import runasync
-from .sql_helper.globals import addgvar, delgvar, gvarstatus
+from config import config
+from core.logger import logging
+from core.session import legend
+from helpers.utils.utils import runasync
+from sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "α • 1.0"
 __license__ = "GNU Affero General Public License v4.0"
