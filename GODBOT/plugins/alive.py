@@ -13,7 +13,7 @@ from telethon.errors.rpcerrorlist import (
 )
 from telethon.events import CallbackQuery
 
-from Legendbot import StartTime, legend, legendversion
+from GODBOT import StartTime, legend, legendversion
 
 from ..Config import Config
 from ..core.managers import eor
