@@ -10,10 +10,10 @@ __version__ = "1.10.6"
 
 loop = None
 
-if Config.LEGEND_STRING:
-    session = StringSession(str(Config.LEGEND_STRING))
+if Config.GOD_STRING:
+    session = StringSession(str(Config.GOD_STRING))
 else:
-    session = "LegendUserBot"
+    session = "GODFATHERUSERBOT"
 
 try:
     legend = LegendClient(
@@ -27,7 +27,7 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"LEGEND_STRING - {e}")
+    print(f"GOD_STRING - {e}")
     sys.exit()
 
 legend.tgbot = tgbot = LegendClient(
