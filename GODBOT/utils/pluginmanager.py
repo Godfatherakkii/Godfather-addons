@@ -2,7 +2,7 @@ import importlib
 import sys
 from pathlib import Path
 
-from Legendbot import CMD_HELP, LOAD_PLUG
+from GODBOT import CMD_HELP, LOAD_PLUG
 
 from ..Config import Config
 from ..core import LOADED_CMDS, PLG_INFO
@@ -13,24 +13,24 @@ from ..helpers.tools import media_type
 from ..helpers.utils import _format, _legendtools, _legendutils, install_pip, reply_id
 from .decorators import admin_cmd, sudo_cmd
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("GODFATHERUSERBOT")
 
 
 def load_module(shortname, plugin_path=None):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        path = Path(f"Legendbot/plugins/{shortname}.py")
+        path = Path(f"GODBOT/plugins/{shortname}.py")
         checkplugins(path)
-        name = "Legendbot.plugins.{}".format(shortname)
+        name = "GODBOT.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         LOGS.info("Successfully imported " + shortname)
     else:
         if plugin_path is None:
-            path = Path(f"Legendbot/plugins/{shortname}.py")
-            name = f"Legendbot.plugins.{shortname}"
+            path = Path(f"GODBOT/plugins/{shortname}.py")
+            name = f"GODBOT.plugins.{shortname}"
         else:
             path = Path((f"{plugin_path}/{shortname}.py"))
             name = f"{plugin_path}/{shortname}".replace("/", ".")
@@ -57,8 +57,8 @@ def load_module(shortname, plugin_path=None):
         mod.borg = legend
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["Legendbot.plugins." + shortname] = mod
-        LOGS.info("LegendBot " + shortname)
+        sys.modules["GODBOT.plugins." + shortname] = mod
+        LOGS.info("GODBOT " + shortname)
 
 
 def remove_plugin(shortname):
@@ -83,7 +83,7 @@ def remove_plugin(shortname):
     except BaseException:
         pass
     try:
-        name = f"Legendbot.plugins.{shortname}"
+        name = f"GODBOT.plugins.{shortname}"
         for i in reversed(range(len(legend._event_builders))):
             ev, cb = legend._event_builders[i]
             if cb.__module__ == name:
