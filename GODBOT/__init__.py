@@ -4,7 +4,7 @@ import time
 
 import heroku3
 
-from .Config import Config
+from .GODBOT import GODBOT
 from .core.logger import logging
 from .core.session import legend
 from .helpers.utils.utils import runasync
