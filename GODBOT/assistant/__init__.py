@@ -1,5 +1,5 @@
-from Legendbot import BOTLOG, BOTLOG_CHATID
-from Legendbot.core.session import legend, tgbot
+from GODBOT import BOTLOG, BOTLOG_CHATID
+from GODBOT.core.session import legend, tgbot
 
 from ..Config import Config
 from ..core.inlinebot import *
